@@ -11,9 +11,14 @@ let inputEl = document.getElementById("input-el")
 const btnEl = document.getElementById("btn-el")
 
 btnEl.addEventListener("click", function(){
-    conversionLength()
-    conversionVolume()
-    conversionMass()
+    let inputValue = inputEl.value
+    if(typeof inputValue === "number"){
+        conversionLength()
+        conversionVolume()
+        conversionMass() 
+    }else{
+        alert(`${inputValue} isnt a number.`)
+    }
 })
 
 function conversionLength() {
